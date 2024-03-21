@@ -1,0 +1,7 @@
+# next
+.next
+.open-next
+
+# shadcn
+src/components/shadcn/ui/*
+src/lib/shadcn/*

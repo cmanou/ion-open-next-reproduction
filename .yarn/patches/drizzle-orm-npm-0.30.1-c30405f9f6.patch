@@ -1,0 +1,22 @@
+diff --git a/pg-core/dialect.js b/pg-core/dialect.js
+index 593f71d00186bb3c3c24b2c33e16563d65a68f62..3f69f5f0541446a391dace574493b7bec3bf1395 100644
+--- a/pg-core/dialect.js
++++ b/pg-core/dialect.js
+@@ -2,7 +2,7 @@ import { aliasedTable, aliasedTableColumn, mapColumnsInAliasedSQLToAlias, mapCol
+ import { Column } from "../column.js";
+ import { entityKind, is } from "../entity.js";
+ import { DrizzleError } from "../errors.js";
+-import { PgColumn, PgDate, PgJson, PgJsonb, PgNumeric, PgTime, PgTimestamp, PgUUID } from "./columns/index.js";
++import { PgColumn, PgDate, PgJson, PgJsonb, PgNumeric, PgTime, PgTimestamp, PgUUID, PgCustomColumn } from "./columns/index.js";
+ import { PgTable } from "./table.js";
+ import {
+   getOperators,
+@@ -361,6 +361,8 @@ class PgDialect {
+       return "date";
+     } else if (is(encoder, PgUUID)) {
+       return "uuid";
++    } else if (is(encoder, PgCustomColumn)) {
++      return encoder.getSQLType();
+     } else {
+       return "none";
+     }

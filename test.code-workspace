@@ -1,0 +1,37 @@
+{
+  "folders": [
+    {
+      "path": ".",
+    },
+  ],
+  "settings": {
+    "files.associations": {
+      "*.css": "tailwindcss",
+    },
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.quickSuggestions": {
+      "strings": "on",
+    },
+    "yaml.schemaStore.enable": false,
+    "yaml.schemas": {
+      "https://moonrepo.dev/schemas/workspace.json": [".moon/workspace.yml"],
+      "https://moonrepo.dev/schemas/toolchain.json": [".moon/toolchain.yml"],
+      "https://moonrepo.dev/schemas/tasks.json": [".moon/tasks/**/*.yml"],
+      "https://moonrepo.dev/schemas/project.json": ["moon.yml"],
+      "https://moonrepo.dev/schemas/template.json": ["template.yml"],
+    },
+    "typescript.tsdk": "node_modules/typescript/lib",
+  },
+  "extensions": {
+    "recommendations": [
+      "redhat.vscode-yaml",
+      "eamodio.gitlens",
+      "github.copilot",
+      "esbenp.prettier-vscode",
+      "dbaeumer.vscode-eslint",
+      "github.vscode-github-actions",
+      "bradlc.vscode-tailwindcss",
+    ],
+  },
+}
