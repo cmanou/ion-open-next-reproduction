@@ -7,7 +7,7 @@ export default async function AuthenticatedLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const trpc = await getServerSideTrpc();
+  const trpc = getServerSideTrpc();
   await trpc.auth.getCurrentUser.prefetch();
 
   // TODO: Add redirect to login if not logged in

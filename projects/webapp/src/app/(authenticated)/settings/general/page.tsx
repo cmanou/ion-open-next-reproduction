@@ -5,7 +5,7 @@ import GeneralSettings from './general-settings';
 export const dynamic = 'force-dynamic';
 
 export default async function SettingsGeneralPage() {
-  const trpc = await getServerSideTrpc();
+  const trpc = getServerSideTrpc();
 
   await trpc.organizations.get.prefetch();
 

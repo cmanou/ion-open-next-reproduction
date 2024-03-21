@@ -14,7 +14,8 @@ export const organizationRouter = router({
     )
     .query(async () => {
       await setTimeout(300);
-      return { id: '1', name: 'organization' };
+      // return  { id: '1', name: 'organization' };
+      return null;
     }),
   getUsers: userOrgAuthenticatedProcedure.query(async ({ ctx }) => {
     await setTimeout(1000);

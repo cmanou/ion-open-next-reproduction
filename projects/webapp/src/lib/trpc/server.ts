@@ -1,4 +1,4 @@
-'use server';
+import 'server-only';
 
 import type { ApiRouter } from '@cmanou/api/routers/_app';
 import {
@@ -13,15 +13,15 @@ import { headers } from 'next/headers';
 import { cache } from 'react';
 import SuperJSON from 'superjson';
 
-const getAbsoluteApiUrl = async () => {
+const getAbsoluteApiUrl = () => {
   return process.env['NEXT_PUBLIC_API_URL']!;
 };
 
-export const getServerSideTrpc = async () => {
+export const getServerSideTrpc = () => {
   const baseLinkOptions: Parameters<typeof httpLink<ApiRouter>>[0] &
     Parameters<typeof httpBatchLink<ApiRouter>>[0] = {
     transformer: SuperJSON,
-    url: await getAbsoluteApiUrl(),
+    url: getAbsoluteApiUrl(),
     headers: cache(() => {
       const clientHeaders = headers();
       const requestHeaders = new Headers();
