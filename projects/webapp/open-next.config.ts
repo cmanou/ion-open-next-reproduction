@@ -1,7 +1,11 @@
 import type { OpenNextConfig } from 'open-next/types/open-next.d.ts';
 
 const config = {
-  default: {},
+  default: {
+    override: {
+      wrapper: 'aws-lambda-streaming',
+    },
+  },
   buildCommand: 'yarn build',
 } satisfies OpenNextConfig;
 

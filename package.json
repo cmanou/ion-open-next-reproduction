@@ -6,8 +6,5 @@
   },
   "workspaces": [
     "projects/*"
-  ],
-  "dependencies": {
-    "@pulumi/aws": "6.15.0"
-  }
+  ]
 }

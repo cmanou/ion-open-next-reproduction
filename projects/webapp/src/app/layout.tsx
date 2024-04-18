@@ -1,5 +1,4 @@
 import { cn } from '@/lib/shadcn/utils';
-import { TRPCReactQueryProvider } from '@/lib/trpc/react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
@@ -18,9 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html className="h-full bg-gray-100" lang="en">
-      <body className={cn(inter.className, 'h-full')}>
-        <TRPCReactQueryProvider>{children}</TRPCReactQueryProvider>
-      </body>
+      <body className={cn(inter.className, 'h-full')}>{children}</body>
     </html>
   );
 }

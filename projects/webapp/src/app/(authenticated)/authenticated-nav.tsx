@@ -15,7 +15,6 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from '@/components/shadcn/ui/navigation-menu';
-import { trpc } from '@/lib/trpc/react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 
@@ -32,7 +31,6 @@ const NavigationMenuNextLink = ({ href, ...props }: Parameters<typeof Link>[0]) 
 
 export function AuthenticatedNav() {
   const router = useRouter();
-  const { data } = trpc.auth.getCurrentUser.useQuery();
 
   return (
     <nav className="border-b border-orange-200 border-opacity-25 bg-orange-500 lg:border-none">
@@ -62,7 +60,7 @@ export function AuthenticatedNav() {
                 <DropdownMenu>
                   <DropdownMenuTrigger>
                     <Avatar className="h-8 w-8 text-sm">
-                      <AvatarFallback>{data?.name?.charAt(0) ?? 'ME'}</AvatarFallback>
+                      <AvatarFallback>ME</AvatarFallback>
                     </Avatar>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="end" onCloseAutoFocus={(e) => e.preventDefault()}>

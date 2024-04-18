@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "add-shadcn-component": "shadcn-ui add",
-    "build": "next build --no-mangling",
+    "build": "next build",
     "dev": "next dev",
-    "open-next-build": "OPEN_NEXT_DEBUG=true open-next build"
+    "open-next-build": "open-next build"
   },
   "dependencies": {
     "@mergeapi/react-merge-link": "^2.1.2",
@@ -22,7 +22,7 @@
     "@trpc/server": "^11.0.0-next-beta.318",
     "class-variance-authority": "^0.7.0",
     "clsx": "2.0.0",
-    "next": "14.1.4",
+    "next": "14.2.1",
     "next-themes": "^0.3.0",
     "react": "^18",
     "react-dom": "^18",
@@ -39,7 +39,7 @@
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.1.0",
-    "open-next": "3.0.0-rc.6",
+    "open-next": "3.0.0-rc.14",
     "postcss": "^8",
     "prettier": "^3.2.5",
     "prettier-plugin-organize-imports": "^3.2.4",

@@ -19,16 +19,16 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"],
-      "@cmanou/api/*": ["../api/src/*"]
+      "@/*": ["./src/*"]
     },
     "outDir": "../../.moon/cache/types/projects/webapp"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules", ".open-next"],
-  "references": [
-    {
-      "path": "../api"
-    }
-  ]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next-dev/types/**/*.ts"
+  ],
+  "exclude": ["node_modules", ".open-next"]
 }
